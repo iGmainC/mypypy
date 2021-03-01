@@ -1,6 +1,6 @@
 FROM pypy:3
-RUN sed -i "s/deb.debian.org/mirrors.aliyun.com/" /etc/apt-get/sources.list \
-    && sed -i "s/security.debian.org/mirrors.aliyun.com/" /etc/apt-get/sources.list \
+RUN sed -i "s/deb.debian.org/mirrors.aliyun.com/" /etc/apt/sources.list \
+    && sed -i "s/security.debian.org/mirrors.aliyun.com/" /etc/apt/sources.list \
     && apt-get update \
     && apt-get upgrade -y \
     && apt-get clean \
